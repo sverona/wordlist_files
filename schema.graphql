@@ -1,0 +1,36 @@
+/*
+enum PartOfSpeech {
+  Adjective
+  Adverb
+  Conjunction
+  DefiniteArticle
+  IndefiniteArticle
+  Interjection
+  Noun
+  Preposition
+  Pronoun
+  Verb
+}
+*/
+
+"A valid word in the WJ3 dictionary."
+type Word {
+  _id: ID!
+  word: String!
+  alphagram: String!
+  definition: String
+  front_hooks: [Character!]!
+  back_hooks: [Character!]!
+  inner_front_hook: Boolean!
+  inner_back_hook: Boolean!
+  playability: Float!
+  playability_rank: Int!
+  probability: Float!
+  probability_rank: Int!
+}
+
+type Alphagram {
+  _id: ID!
+  alpha: String!
+  words: [Word!]!
+}
